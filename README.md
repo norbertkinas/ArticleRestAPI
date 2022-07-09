@@ -4,6 +4,7 @@ Basic Article Rest API
 Java 11
 
 DB used - mySQL
+
 connection properties in -> src.main.resources.application.properties
 
 Article SQL:
