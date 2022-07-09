@@ -114,7 +114,7 @@ class ArticleControllerTest extends AbstractTest {
 
     @Test
     void deleteArticle() throws Exception {
-        int id = 49;
+        int id = 51;
         String uri = "/articles/" + id;
         MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(uri)
                 .accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();

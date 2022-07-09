@@ -5,9 +5,7 @@ import norbert.kinas.Article.model.Article;
 import norbert.kinas.Article.repository.ArticleRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -28,8 +26,7 @@ public class ArticleService {
     public List<Article> getArticleByKeyword(String keyword) {
         Set<Article> set = new HashSet<>(articleRepository.findByReleaseBodyContaining(keyword));
         set.addAll(articleRepository.findByReleaseTitleContaining(keyword));
-
-        return set.stream().toList();
+        return new ArrayList<>(set);
     }
 
     public List<Article> getArticles() {
